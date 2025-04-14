@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformación Digital - Codeflow Dynamics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+      <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: #e3f2fd;
+            
+            
+        }
+        h1{
+            color: #1565c0;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background: #1e88e5;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            left: -250px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background: #1565c0;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            color: #1976d2;
+        }
+
+        @media (max-width: 600px) {
+            .menu-btn {
+                font-size: 24px;
+            }
+            .menu-btn::after {
+                content: '\2807'; /* Tres puntos verticales */
+            }
+        }
+
+        /* Main Content */
+        main {
+            margin-left: 120px;
+            padding: 40px;
+            width: 85%;
+            max-width: 1200px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color:#1e88e5;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h3 {
+            font-size: 28px;
+            color: #007bff;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e88e5;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        <a href="soporte.html">Soporte</a>
+        <a href="info.html">Sobre Nosotros</a>
+        <a href="desarrollo.html">Desarrollo</a>
+        <a href="consultoria.html">Consultoría</a>
+        <a href="transformacion_digital.html">Transformación Digital</a>
+    </div>
+
+    <!-- Main Content -->
+     <head>
+        <h1>Transformación Digital</h1>
+     </head>
+    <main>
+       
+
+        <section>
+            <h3>¿Por qué es importante la Transformación Digital?</h3>
+            <p>La transformación digital no es solo una tendencia, es una necesidad para las empresas que buscan mantenerse competitivas en un mundo cada vez más digital. Este proceso permite integrar tecnologías en todos los aspectos del negocio, optimizando procesos y ofreciendo una mejor experiencia al cliente.</p>
+        </section>
+
+        <section>
+            <h3>Servicios de Transformación Digital</h3>
+            <p>En Codeflow Dynamics, ofrecemos una variedad de servicios para guiarte en tu transformación digital:</p>
+            <ul>
+                <li><strong>Consultoría en Tecnología:</strong> Proponemos soluciones tecnológicas personalizadas para tu empresa.</li>
+                <li><strong>Automatización de procesos:</strong> Implementamos soluciones de automatización para aumentar la eficiencia.</li>
+                <li><strong>Optimización de infraestructura:</strong> Mejoramos la infraestructura tecnológica para mayor velocidad y seguridad.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Contacto</h3>
+            <p>Para empezar tu viaje hacia la transformación digital, contáctanos:</p>
+            <ul>
+                <li><strong>Dirección:</strong> 1234 Innovation Blvd, Los Ángeles, CA 90001, Estados Unidos</li>
+                <li><strong>Teléfono:</strong> <a href="tel:+1234567890">+1 234 567 890</a></li>
+                <li><strong>Correo Electrónico:</strong> <a href="mailto:contacto@codeflowdynamics.com">contacto@codeflowdynamics.com</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Codeflow Dynamics. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio - Codeflow Dynamics</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            function toggleMenu() {
+                document.getElementById("sidebar").classList.toggle("active");
+            }
+        </script>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #1e88e5;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            left: -250px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background: #1565c0;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            color: #1976d2;
+        }
+
+        @media (max-width: 600px) {
+            .menu-btn {
+                font-size: 24px;
+            }
+            .menu-btn::after {
+                content: '\2807'; /* Tres puntos verticales */
+            }
+        }
+        
+        main {
+            margin-top: 50px;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e88e5;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            background: #1e88e5;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1565c0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1e88e5;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    </head>
+<body>
+    
+        <h1>Editar Reporte</h1>
+        <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+    
+        <div class="sidebar" id="sidebar">
+            <a href="index.html"><img src="logo.png" alt="Logo"></a>
+            <a href="index.html">Inicio</a>
+            <a href="ordenes.html">Órdenes</a>
+            <a href="inventario.html">Inventario</a>
+            <a href="reportes.html">Reportes</a>
+            <a href="usuarios.html">Usuarios</a>
+            <a href="info.html">Sobre Nosotros</a>
+            <a href="soporte.html">Soporte</a>
+        </div>
+    <main>
+        <h2>Reporte</h2>
+        <form action="cargar_reporte.php" method="POST">
+            <label for="reporte_id">ID Reporte:</label>
+            <input type="number" id="reporte_id" name="reporte_id" required>
+           
+        </form>
+
+        <h2>Editar Reporte</h2>
+        <form action="actualizar_reporte.php" method="POST">
+            <label for="Reporte">Reporte:</label>
+            <input type="text" id="Reporte" name="Reporte" required>
+
+            <label for="Producto">Producto:</label>
+            <input type="text" id="Producto" name="Producto" required>
+            
+            
+            <label for="Descripción">Descripción:</label>
+            <textarea id="contenido" name="Descripción" rows="5" required></textarea>
+
+            <label for="Estado">Estado:</label>
+            <input type="text" id="Estado" name="Estado" required>
+            <button type="submit">Actualizar Reporte</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Codeflow Dynamics. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
