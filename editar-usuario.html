@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio - Codeflow Dynamics</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            function toggleMenu() {
+                document.getElementById("sidebar").classList.toggle("active");
+            }
+        </script>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #1e88e5;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            left: -250px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background: #1565c0;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            color: #1976d2;
+        }
+
+        @media (max-width: 600px) {
+            .menu-btn {
+                font-size: 24px;
+            }
+            .menu-btn::after {
+                content: '\2807'; /* Tres puntos verticales */
+            }
+        }
+        
+        main {
+            margin-top: 50px;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e88e5;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            background: #1e88e5;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1565c0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1e88e5;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    </head>
+<body>
+    
+        <h1>Editar Usuario</h1>
+        
+    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+    
+        <div class="sidebar" id="sidebar">
+            <a href="index.html"><img src="logo.png" alt="Logo"></a>
+            <a href="index.html">Inicio</a>
+            <a href="ordenes.html">Órdenes</a>
+            <a href="inventario.html">Inventario</a>
+            <a href="reportes.html">Reportes</a>
+            <a href="usuarios.html">Usuarios</a>
+            <a href="info.html">Sobre Nosotros</a>
+            <a href="soporte.html">Soporte</a>
+        </div>
+    <main>
+        <h2>Usuario</h2>
+        <form action="cargar_usuario.php" method="POST">
+            <label for="usuario_id">ID Usuario:</label>
+            <input type="number" id="usuario_id" name="usuario_id" required>
+            
+        </form>
+
+        <h2>Editar Usuario</h2>
+        <form action="actualizar_usuario.php" method="POST">
+            <input type="hidden" id="usuario_id_edit" name="usuario_id_edit">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            <button type="submit">Actualizar Usuario</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Codeflow Dynamics. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

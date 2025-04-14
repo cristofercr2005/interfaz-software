@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio - Codeflow Dynamics</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            function toggleMenu() {
+                document.getElementById("sidebar").classList.toggle("active");
+            }
+        </script>
+         <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #e3f2fd;
+                display: flex;
+            }
+            .sidebar {
+                width: 250px;
+                background: #1e88e5;
+                color: white;
+                height: 100vh;
+                position: fixed;
+                left: -250px;
+                transition: 0.3s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 20px;
+            }
+            .sidebar.active {
+                left: 0;
+            }
+            .sidebar img {
+                width: 150px;
+                margin-bottom: 20px;
+            }
+            .sidebar a {
+                color: white;
+                text-decoration: none;
+                padding: 15px;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            .sidebar a:hover {
+                background: #1565c0;
+            }
+            .menu-btn {
+                font-size: 30px;
+                cursor: pointer;
+                position: absolute;
+                left: 20px;
+                top: 15px;
+                color: #1976d2;
+            }
+            main {
+                margin-left: 50px;
+                padding: 20px;
+                text-align: center;
+                flex-grow: 1;
+            }
+            .logo {
+                width: 200px;
+                margin-top: 50px;
+            }
+            .agregar-btn {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+            }
+            .agregar-btn:hover {
+                background-color: #218838;
+                transform: translateY(-2px);
+            }
+            .agregar-btn:active {
+                background-color: #1e7e34;
+                transform: translateY(1px);
+            }
+            .search-container {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .search-container input[type="text"] {
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin-right: 10px;
+            }
+            .search-container button {
+                padding: 10px 20px;
+                background-color: #1976d2;
+                color: white;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .search-container button:hover {
+                background-color: #1565c0;
+            }
+            .buttons-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 20px;
+            }
+            .reporte-lista {
+                width: 110%;
+                display: flex;
+                justify-content: center; /* Centra la tabla */
+                padding: 20px 0; 
+                
+                 /* Ase/* Espaciado superior e inferior */
+            }
+            table {
+                width: 80%; /* Se ajusta el ancho de la tabla */
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 20px;
+                text-align: center;
+                border: 1px solid #ddd;
+            }
+            th {
+                background-color: #1976d2;
+                color: white;
+            }
+        </style>
+    </head>
+<body>
+    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+    
+    <div class="sidebar" id="sidebar">
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        <a href="index.html">Inicio</a>
+        <a href="ordenes.html">Órdenes</a>
+        <a href="inventario.html">Inventario</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="usuarios.html">Usuarios</a>
+        <a href="info.html">Sobre Nosotros</a>
+        <a href="soporte.html">Soporte</a>
+    </div>
+    <main>
+        <h2>Generación de Reportes</h2>
+        <p>Visualiza y genera reportes detallados de las operaciones de tu negocio, desde ventas hasta inventarios.</p>
+        <div class="search-container">
+            <input type="text" id="searchId" placeholder="Buscar por ID de reporte">
+            <button onclick="searchUser()">Buscar</button>
+        </div>
+        <div class="navbar">
+            <tr>
+                <td>
+                    <a href="agregar-reporte.html">
+                        <button class="agregar-btn">Agregar reporte</button>
+                    </a>
+                    <a href="eliminar-reporte.html">
+                        <button class="agregar-btn">Eliminar reporte</button>
+                    </a>
+                </td>
+            </tr>
+        </div>
+        <div class="reporte-lista">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código Reporte</th>
+                        <th>Reporte</th>
+                        <th>Producto</th>
+                        <th>Fecha</th>
+                        <th>Descripción</th>
+                        <th>Estado</th>
+                        
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5603</td>
+                        <td>Producto Dañado</td>
+                        <td>Jarrón Nuble</td>
+                        <td>2025-01-15</td>
+                        <td>El jarrón llegó roto.</td>
+                        <td>En revisión</td>
+                        
+                        <td>
+                            <a href="editar-reporte.html">
+                                <button class="agregar-btn">Editar reporte</button>
+                            </a>
+                            <a href="actualizar_reporte.html">
+                                <button class="agregar-btn">Actualizar reporte</button>
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Más productos -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Codeflow Dynamics. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

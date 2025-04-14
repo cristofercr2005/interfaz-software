@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo de Software - Codeflow Dynamics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header{
+            background-color: #e3f2fd;
+            
+            
+        }
+        h1{
+            color: #1565c0;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #1e88e5;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            left: -250px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background: #1565c0;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            color: #1976d2;
+        }
+
+        @media (max-width: 600px) {
+            .menu-btn {
+                font-size: 24px;
+            }
+            .menu-btn::after {
+                content: '\2807'; /* Tres puntos verticales */
+            }
+        }
+
+        main {
+            margin-top: 50px;
+            padding: 40px;
+            width: 90%;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e88e5;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+            text-align: center;
+        }
+        p2 {
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 1.6;
+            text-align: justify;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1e88e5;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        <a href="soporte.html">Soporte</a>
+        <a href="info.html">Sobre Nosotros</a>
+        <a href="desarrollo.html">Desarrollo</a>
+        <a href="consultoria.html">Consultoría</a>
+        <a href="tdigital.html">Transformación Digital</a>
+    </div>
+
+    <body>
+        <header>
+            <h1>Desarrollo de Software - Codeflow Dynamics</h1>
+        </header>
+    
+        <main>
+            <h2>Transforma tu negocio con soluciones de software personalizadas</h2>
+    
+            <div class="service-details">
+                <h3>Aplicaciones Móviles</h3>
+                <p>Desarrollamos aplicaciones móviles tanto para Android como para iOS, creando experiencias excepcionales para tus usuarios. Desde el diseño de la interfaz hasta la integración con bases de datos, nos encargamos de todo el proceso de desarrollo.</p>
+    
+                <h3>Aplicaciones Web</h3>
+                <p>Diseñamos y desarrollamos aplicaciones web modernas y funcionales, optimizadas para brindar un rendimiento excelente. Usamos las últimas tecnologías para garantizar que tus aplicaciones sean escalables y seguras.</p>
+    
+                <h3>Plataformas de Escritorio</h3>
+                <p>Creamos software de escritorio robusto y fácil de usar, con una interfaz amigable y potente, adecuado para negocios que requieren soluciones locales en sus sistemas.</p>
+            </div>
+        </main>
+    
+        <footer>
+            <p2>&copy; 2025 Codeflow Dynamics. Todos los derechos reservados.</p2>
+        </footer>
+    </body>
+    </html>

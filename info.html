@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Codeflow Dynamics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #1e88e5;
+            position: fixed;
+            left: -250px;
+            transition: 0.3s ease;
+            padding-top: 60px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar img {
+            width: 180px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px 20px;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #1e88e5;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            color: #007bff;
+        }
+
+        @media (max-width: 600px) {
+            .menu-btn {
+                font-size: 24px;
+            }
+        }
+
+        /* Main Content */
+        main {
+            
+            margin-left: 120px;
+            padding: 40px;
+            width: 85%;
+            max-width: 1200px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color:#1e88e5;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h3 {
+            font-size: 28px;
+            color: #007bff;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        ul li {
+            margin: 12px 0;
+        }
+
+        .contact-info li a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info li a:hover {
+            color: #0056b3;
+        }
+
+        /* Servicios */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card h4 {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .service-card a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e88e5;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            main {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .services {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        <a href="index.html">Inicio</a>
+        <a href="ordenes.html">Órdenes</a>
+        <a href="inventario.html">Inventario</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="usuarios.html">Usuarios</a>
+        <a href="soporte.html">Soporte</a>
+        <a href="sobre_nosotros.html">Sobre Nosotros</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Sobre Nosotros</h2>
+
+        <section>
+            <h3>Nuestra Misión</h3>
+            <p>En <strong>Codeflow Dynamics</strong>, Fomentar la innovación y la excelencia en el desarrollo ágil de software, combinando creatividad,
+                colaboración y tecnología para entregar soluciones que transformen ideas en realidades funcionales
+                y de impacto.
+                </p>
+        </section>
+
+        <section>
+            <h3>Nuestra Visión</h3>
+            <p>Convertirnos en un equipo líder en el desarrollo ágil, reconocido por nuestra capacidad de
+                adaptación, enfoque en resultados y compromiso con la excelencia tecnológica, impulsando el futuro
+                de las soluciones digitales.</p>
+        </section>
+
+        <section>
+            <h3>Valores</h3>
+            <ul>
+                <li><strong>Innovación:</strong> Siempre a la vanguardia de la tecnología para ofrecer soluciones únicas y personalizadas.</li>
+                <li><strong>Compromiso:</strong> Trabajamos con dedicación y pasión para ayudar a nuestros clientes a alcanzar sus metas.</li>
+                <li><strong>Ética:</strong> Actuamos con integridad, transparencia y respeto en todos nuestros procesos y relaciones.</li>
+                <li><strong>Trabajo en equipo:</strong> Creemos que la colaboración es la clave para lograr grandes resultados.</li>
+            </ul>
+        </section>
+
+        <!-- Servicios -->
+        <section>
+            <h3>Nuestros Servicios</h3>
+            <div class="services">
+                <div class="service-card">
+                    <h4>Desarrollo de Software</h4>
+                    <p>Ofrecemos soluciones a medida para empresas, desde aplicaciones web hasta plataformas móviles y de escritorio.</p>
+                    <a href="desarrollo.html">Más Información</a>
+                </div>
+
+                <div class="service-card">
+                    <h4>Consultoría IT</h4>
+                    <p>Ayudamos a las empresas a mejorar sus procesos mediante el uso eficiente de las tecnologías de la información.</p>
+                    <a href="consultoria.html">Más Información</a>
+                </div>
+
+                <div class="service-card">
+                    <h4>Transformación Digital</h4>
+                    <p>Te ayudamos a modernizar tu infraestructura y procesos, aprovechando las últimas innovaciones tecnológicas.</p>
+                    <a href="tdigital.html">Más Información</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Contacto</h3>
+            <p>Para obtener más información sobre nuestros servicios o para cualquier consulta, por favor, no dudes en ponerte en contacto con nosotros:</p>
+            <ul class="contact-info">
+                <li><strong>Dirección:</strong> 1234 Innovation Blvd, Los Ángeles, CA 90001, Estados Unidos</li>
+                <li><strong>Teléfono:</strong> <a href="tel:+1234567890">+1 234 567 890</a></li>
+                <li><strong>Correo Electrónico:</strong> <a href="mailto:contacto@codeflowdynamics.com">contacto@codeflowdynamics.com</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Codeflow Dynamics. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
